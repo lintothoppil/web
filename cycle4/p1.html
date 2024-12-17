@@ -1,0 +1,41 @@
+<html>
+<head>
+ 
+    <title>p1</title>
+	
+	<script>
+        function display() {
+           
+            var inputValue = document.getElementById('userInput').value;
+
+           
+            document.getElementById('output').textContent = inputValue;
+        }
+    </script>
+	
+	<style>
+	h1{
+	
+	color:green;
+	}
+	
+	</style>
+	
+	
+</head>
+<body>
+<h1><u>Display output in p tag</u></h1>
+
+
+   enter any string: <input type="text" id="userInput">
+
+
+    <button onclick="display()">print</button>
+
+    <p id="output"></p>
+
+    
+
+</body>
+</html>
+

@@ -1,0 +1,48 @@
+
+<html>
+<head>
+    
+    <title>Addition of Two Numbers</title>
+	<script>
+        function addNumbers() {
+           
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+
+         
+            var sum = num1 + num2;
+
+        
+            document.getElementById('result').textContent = 'Sum: ' + sum;
+        }
+    </script>
+	
+	<style>
+	body{
+	text-align:center;
+	}
+	h1{
+	color:green;
+	}
+	
+	</style>
+	
+	
+	
+	
+</head>
+<body>
+<h1><u>Addition of two numbers</u></h1>
+  
+    Enter first number:  <input type="number" id="num1" ><br>
+    Enter second number:<input type="number" id="num2" ><br>
+
+    <button onclick="addNumbers()">Sum</button>
+
+    
+    <p id="result"></p>
+
+    
+
+</body>
+</html>

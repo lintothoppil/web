@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    
+    <title>Change Text Color</title>
+    <style>
+        #text {
+            font-size: 20px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h2>Change Text Color on Button Click</h2>
+    <p id="text">This is the text whose color will change.</p>
+    <button onclick="changeColor()">Click Me to Change Color</button>
+
+    <script>
+        function changeColor() {
+            const text = document.getElementById("text");
+            text.style.color = "blue"; // Change to your desired color
+        }
+    </script>
+</body>
+</html>

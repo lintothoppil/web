@@ -1,0 +1,202 @@
+<!DOCTYP
+E html>
+
+<html>
+
+<head>
+
+<style>
+
+body{
+
+background-color : gray;
+
+color : white;
+
+}
+
+.button{
+
+background-color : green;
+
+border : none;
+
+color : white;
+
+text-decoration : bold;
+
+padding : 10px 20px;
+
+font-size : 16px;
+
+margin : 4px 2px;
+
+cursor : pointer;
+
+}
+
+.div{ background-color:coral; margin:10px; }
+
+</style>
+
+</head>
+
+<body>
+
+<center>
+
+<form method="post" name="myform">
+
+<div class="div"><font size="4" face="Cooper"><h1
+align="center">REGISTRATION</h1></font></div>
+
+<table class="table" style="width:700px" align="center" cellpadding ="20">
+
+<tr>
+
+<th>FIRSTNAME</th>
+
+<td><input type="text" name="fname"
+style="width:400px;" required=""></td>
+
+</tr>
+
+<tr>
+
+<th>LASTNAME</th>
+
+<td><input type="text" name="lname" style="width:400px;"
+required=""></td>
+</tr>
+
+<tr>
+
+<th>DOB</th>
+
+<td><input type="date" name="DOB"
+style="width:400px;"></td>
+
+</tr>
+
+<tr>
+
+<th>GENDER</th>
+
+<td><input type="radio" name="gender" value="female"
+>Female<input type="radio" name="gender" value="male">Male</td>
+
+</tr>
+
+<tr>
+
+<th>EMAIL</th>
+
+<td><input type="email" name="email"
+style="width:400px;" ></td>
+</tr>
+
+<tr>
+
+<th>PHONE</th>
+
+<td><input type="number" name="phone"
+style="width:400px;" required=""><span id="numloc"></span></td>
+
+</tr>
+
+<tr>
+
+<th>USERNAME</th>
+
+<td><input type="text" name="username"
+style="width:400px;" required=""></td>
+
+</tr>
+
+<tr>
+
+<th>PASSWORD</th>
+
+<td><input type="password" name="password"
+style="width:400px;" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one
+number and one uppercase and lowercase letter, and at least 8 or more characters" required=""><span
+id="luk"></span></td>
+
+</tr>
+
+<tr>
+
+<td align="center" colspan="2"><input class="button"
+onclick="validateform()" type="submit" name="submit" value="REGISTER"></td>
+
+</tr>
+
+</table>
+
+</form>
+
+<script>
+
+function validateform(){
+
+var f=document.myform.fname.value;
+
+var l=document.myform.lname.value;
+
+var e=document.myform.email.value;
+
+var atposition=x.indexOf("@");
+
+var dotposition=x.lastIndexOf(".");
+
+if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){
+
+alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);
+
+return false;
+
+}
+
+var ph=document.myform.phone.value;
+
+if (isNaN(ph)){
+
+document.getElementById("numloc").innerHTML="enter numeric value only";
+
+return false;
+
+}
+
+else{
+
+return true;
+
+}
+
+var u=document.myform.username.value;
+
+var p=document.myform.password.value;
+
+var lw = /[a-z]/g;
+
+var uw = /[A-Z]/g;
+
+var n = /[0-9]/g
+
+if (p.value.match(lw) || p.value.match(uw)|| p.value.match(n) || p.value.length >= 8 ) {
+
+alert("Please enter a valid password");
+
+return false;
+
+}
+
+}
+
+</script>
+
+</center>
+
+</body>
+
+</html>
